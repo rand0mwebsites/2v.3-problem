@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 3</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://kit.fontawesome.com/3a751583ae.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="(2v)3 problem.png">
+    <style>
+        body{
+            background-color:#999999;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label for="pswd">Enter the passcode from puzzle 2: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is admin-->
+    <script type="text/javascript">
+        function checkPswd() {
+        var confirmPassword = "2dU8oe";
+        var password = document.getElementById("pswd").value;
+            if (password == confirmPassword) {
+             window.location="3.html";
+            }
+            else{
+            alert("Passwords do not match.");
+        }
+        }    
+    </script>
+    <p>
+    	This might help: 모스 부호 사용 | Použite Morseov kód | ମୋର୍ସ କୋଡ୍ ବ୍ୟବହାର କରନ୍ତୁ | Օգտագործեք Մորս կոդ
+	</p>    	
+</body>
+</html>

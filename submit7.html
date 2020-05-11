@@ -1,0 +1,36 @@
+766741
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 6</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://kit.fontawesome.com/3a751583ae.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="(2v)3 problem.png">
+    <style>
+        body{
+            background-color:#999999;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label for="pswd">Enter the passcode from puzzle 6: </label>
+    <input type="password" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<!--Function to check password the already set password is admin-->
+    <script type="text/javascript">
+        function checkPswd() {
+        var confirmPassword = "766741";
+        var password = document.getElementById("pswd").value;
+            if (password == confirmPassword) {
+             window.location="7.html";
+            }
+            else{
+            alert("Passwords do not match.");
+        }
+        }    
+    </script>
+</body>
+</html>
