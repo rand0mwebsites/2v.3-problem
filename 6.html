@@ -2,11 +2,44 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Problem 6</title>
+		<title>Problem 5</title>
 		<link rel="stylesheet" href="css.css">
 		<script src="https://kit.fontawesome.com/3a751583ae.js" crossorigin="anonymous"></script>
 		<link rel="icon" href="(2v)3 problem.png">
 		<style>
+			      /* Tooltip container */
+	     .tooltip {
+	      position: relative;
+	     display: inline-block;
+	     }
+
+	   	 /* Tooltip text */
+	   	 .tooltip .tooltiptext {
+	  	 	  visibility: hidden;
+		  	   width: 25px;
+		   	  height:25px;
+	   		  background-color: black;
+	   		  color: #ffffff;
+		   	  text-align: center;
+	  		  padding: 5px 0;
+	  	 	 border-radius: 5px;
+	    	 font-size:25px;
+	     		 /* Position the tooltip text - see examples below! */
+	   		  position: absolute;
+	   		  z-index: 1;
+	      }
+
+	     /* Show the tooltip text when you mouse over the tooltip container */
+	     .tooltip:hover .tooltiptext {
+	  	   visibility: visible;
+	     }
+	     .tooltip .tooltiptext {
+			  width: 25px;
+			  top: 100%;
+			  left: 50%;
+			  margin-left: -12.5px; /* Use half of the width (120/2 = 60), to center the tooltip */
+			}
+
 			p{
 				color:#440088;
 				font-family:Times New Roman;
@@ -41,30 +74,59 @@
 				background-color:#cccccc;
 
 			}
+			ul:hover li{
+
+				display:block;
+			}
+
+			h1{
+				font-size:20px;
+				font-family:Verdana;
+			}
+
+			h3{
+				font-size:20px;
+				font-family:Verdana;
+			}
 		</style>
 	</head>
 	<body>
-		<h1>Find the numbers of the highlighted boxes. The code for the next problem is the highlighted box numbers in the the order of red, orange, yellow, green, purple, blue.</h1> 
+		<h1>Find the numbers of the highlighted boxes. The code for the next problem is the highlighted box numbers in the the order of red, orange, yellow, green, blue, purple. Hovering over each color will also show you which number it is in the sequence.</h1>
 		<h3>You must complete this sudoku to get the code to the next puzzle</h3>
+		<h3>If you reload this page, your progress will be lost. If you get the wrong numbers, you will have to restart.</h3>
 		<table border ="1">
-			<tr><td style="background-color:#BE57EE ;"><input type="text" size="1"style="background-color:#BE57EE ;" maxlength="1"></td> <td class="gray"><input type="text" size="1"class="gray" maxlength="1"></td> <td class="gray"><input type="text" size="1"class="gray" maxlength="1"></td></td><td><input type="text" size="1" maxlength="1"></td><td><p>2</p></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><p>3</p></td></tr>
+			<tr><td style="background-color:#BE57EE ;"><div class="tooltip"><input type="text" size="1" style="background-color:#BE57EE ;" maxlength="1"><span class="tooltiptext">6</span></div></td> <td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td> <td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><p>2</p></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><p>3</p></td></tr>
 
-			<tr><td class="gray"><input type="text" size="1"class="gray" maxlength="1"></td> <td class="gray"><input type="text" size="1"class="gray" maxlength="1"></td> <td class="gray"><p>2</p></td><td><p>5</p></td><td><input type="text" size="1" maxlength="1"></td><td><p>9</p></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td  style="background-color:#FFF643 ;"><input type="text" size="1" class="gray" maxlength="1" style="background-color:#FFF643 ;"></td><td class="gray"><p>8</p></td></tr>
+			<tr><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td> <td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td> <td class="gray"><p>2</p></td><td><p>5</p></td><td><input type="text" size="1" maxlength="1"></td><td><p>9</p></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td  style="background-color:#FFF643 ;"><div class="tooltip"><input type="text" size="1" class="gray" maxlength="1" style="background-color:#FFF643 ;"><span class="tooltiptext">3</span></div></td><td class="gray"><p>8</p></td></tr>
 
 			<tr><td class="gray"><p>6</p></td> <td class="gray"><p>3</p></td> <td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><p>8</p></td><td class="gray"><p>7</p></td><td class="gray"><p>5</p></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td></tr>
 
-			<tr><td><input type="text" size="1" maxlength="1"></td><td style="background-color:#dd5d5d ;"><input type="text" size="1" maxlength="1" style="background-color:#dd5d5d ;"></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><p>9</p></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><p>5</p></tr>
+			<tr><td><input type="text" size="1" maxlength="1"></td><td style="background-color:#dd5d5d ;"><div class="tooltip"><input type="text" size="1" maxlength="1" style="background-color:#dd5d5d ;"><span class="tooltiptext">1</span></div></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><p>9</p></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><p>5</p></tr>
 
-			<tr><td><input type="text" size="1" maxlength="1"></td><td><p>8</p></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><p>5</p></td><td style="background-color:#57A7EE ;"><input type="text" size="1" style="background-color:#57A7EE ;" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><p>4</p></td><td><input type="text" size="1" maxlength="1"></tr>
+			<tr><td><input type="text" size="1" maxlength="1"></td><td><p>8</p></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><p>5</p></td><td style="background-color:#57A7EE ;"><div class="tooltip"><input type="text" size="1" style="background-color:#57A7EE ;" maxlength="1"><span class="tooltiptext">5</span></div>
+			</td><td><input type="text" size="1" maxlength="1"></td><td><p>4</p></td><td><input type="text" size="1" maxlength="1"></tr>
 
 			<tr><td><p>9</p></td><td><input type="text" size="1" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><p>2</p></td><td><input type="text" size="1" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></tr>
 
-			<tr><td class="gray"><input type="text" size="1"class="gray" maxlength="1"></td> <td class="gray"><p>2</p></td> <td class="gray"><p>7</p></td><td><p>4</p></td></td></td><td><input type="text" size="1" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><p>1</p></td><td class="gray"><p>6</p></td></td></tr>
+			<tr><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td> <td class="gray"><p>2</p></td> <td class="gray"><p>7</p></td><td><p>4</p></td> <td><input type="text" size="1" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><p>1</p></td><td class="gray"><p>6</p></td></tr>
 
-			<tr><td class="gray"><p>5</p></td> <td  style="background-color:#FF883B ;"><input type="text" size="1" maxlength="1" style="background-color:#FF883B ;"></td> <td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td><p>2</p></td></td></td><td><input type="text" size="1" maxlength="1"></td><td><p>3</p></td><td class="gray"><p>8</p></td><td style="background-color:#43C131;"><input type="text" size="1"  maxlength="1" style=" background-color:#43C131 ;"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td></tr>
+			<tr><td class="gray"><p>5</p></td> <td  style="background-color:#FF883B ;"><div class="tooltip"><input type="text" size="1" maxlength="1" style="background-color:#FF883B ;"><span class="tooltiptext">2</span></div></td> <td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td><p>2</p></td><td><input type="text" size="1" maxlength="1"></td><td><p>3</p></td><td class="gray"><p>8</p></td><td style="background-color:#43C131;"><div class="tooltip"><input type="text" size="1"  maxlength="1" style=" background-color:#43C131 ;"><span class="tooltiptext">4</span></div></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td></tr>
 
-			<tr><td class="gray"><p>1</p></td> <td class="gray"><input type="text" size="1"class="gray" maxlength="1"></td> <td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td></td></td><td><p>7</p></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td></tr>
+			<tr><td class="gray"><p>1</p></td> <td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td> <td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td><input type="text" size="1" maxlength="1"></td><td><p>7</p></td><td><input type="text" size="1" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td><td class="gray"><input type="text" size="1" class="gray" maxlength="1"></td></tr>
 		</table>
+		<nav style="display:none">
+		<div class="tooltip"><input type="text" size="1" maxlength="1" style="background-color:#dd5d5d ;"><span class="tooltiptext">1</span></div>
+
+		<div class="tooltip"><input type="text" size="1" maxlength="1" style="background-color:#FF883B ;"><span class="tooltiptext">2</span></div>
+
+		<div class="tooltip"><input type="text" size="1" class="gray" maxlength="1" style="background-color:#FFF643 ;"><span class="tooltiptext">3</span></div>
+
+		<div class="tooltip"><input type="text" size="1"  maxlength="1" style=" background-color:#43C131 ;"><span class="tooltiptext">4</span></div>
+
+		<div class="tooltip"><input type="text" size="1" style="background-color:#57A7EE ;" maxlength="1" ><span class="tooltiptext">5</span></div>
+
+		<div class="tooltip"><input type="text" size="1" style="background-color:#BE57EE ;" maxlength="1" ><span class="tooltiptext">6</span></div>
+		</nav>
 		<p style="display:none"> 
 			 style="background-color:#dd5d5d ;"
 			 style="background-color:#FF883B ;"
@@ -73,7 +135,9 @@
 			 style="background-color:#57A7EE ;"
 			 style="background-color:#BE57EE ;"
 			</p>
-		<h3>If you reload this page, your progress will be lost. If you get the wrong numbers, you will have to restart. If you are color blind, message me on discord.</h3>
+
+
+			<p style="display:none;">onkeyup='saveValue(this);'/</p>
 
 	</body>
 </html>
